@@ -7,19 +7,19 @@ function Dashboard({ username, onLogout }) {
   const [loading, setLoading] = useState(false);
   const [history, setHistory] = useState([]);
 
-  useEffect(() => {
-    fetchHistory();
-  }, [username]);
-
   const fetchHistory = async () => {
-    try {
-      const res = await fetch(`https://court-in-action.onrender.com/history/${username}`);
-      const data = await res.json();
-      setHistory(data);
-    } catch (err) {
-      console.error(err);
-    }
-  };
+  try {
+    const res = await fetch(`https://court-in-action.onrender.com/history/${username}`);
+    const data = await res.json();
+    setHistory(data);
+  } catch (err) {
+    console.error(err);
+  }
+};
+
+useEffect(() => {
+  fetchHistory();
+}, [username]); 
 
   const handleUpload = async () => {
     if (!file) {
