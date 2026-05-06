@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback} from "react";
 import "./Dashboard.css";
 
 function Dashboard({ username, onLogout }) {
@@ -7,7 +7,7 @@ function Dashboard({ username, onLogout }) {
   const [loading, setLoading] = useState(false);
   const [history, setHistory] = useState([]);
 
-  const fetchHistory = async () => {
+  const fetchHistory = useCallback(async () => {
   try {
     const res = await fetch(`https://court-in-action.onrender.com/history/${username}`);
     const data = await res.json();
@@ -15,11 +15,11 @@ function Dashboard({ username, onLogout }) {
   } catch (err) {
     console.error(err);
   }
-};
+}, [username]);
 
 useEffect(() => {
   fetchHistory();
-}, [username]); 
+}, [fetchHistory]); 
 
   const handleUpload = async () => {
     if (!file) {
