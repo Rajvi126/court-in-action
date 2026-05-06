@@ -1,0 +1,32 @@
+[
+    {
+        "username": "rajvi",
+        "category": "Criminal",
+        "report_file": "cb6da9ce-ca82-4c00-aad0-be378e0d06dc.pdf",
+        "timestamp": "2026-05-06 00:50:35.573342"
+    },
+    {
+        "username": "rajvi",
+        "category": "Property",
+        "report_file": "2d53a759-5bad-4fa8-844f-83438d21593c.pdf",
+        "timestamp": "2026-05-06 01:00:24.463141"
+    },
+    {
+        "username": "rajvi",
+        "category": "Property",
+        "report_file": "297955ce-64d5-4af3-a7d4-1aedf4eac1be.pdf",
+        "timestamp": "2026-05-06 13:28:28.063697"
+    },
+    {
+        "username": "nikita",
+        "category": "Property",
+        "report_file": "342f1c5b-9221-4b1f-9a22-ba4f32464c87.pdf",
+        "timestamp": "2026-05-06 16:19:33.033327"
+    },
+    {
+        "username": "nikita",
+        "category": "Property",
+        "report_file": "fa29d72a-6b2e-49ea-8e74-c7d9bf7eac2d.pdf",
+        "timestamp": "2026-05-06 16:39:23.392270"
+    }
+]
