@@ -13,7 +13,7 @@ function Dashboard({ username, onLogout }) {
 
   const fetchHistory = async () => {
     try {
-      const res = await fetch(`http://127.0.0.1:8000/history/${username}`);
+      const res = await fetch(`https://court-in-action.onrender.com/history/${username}`);
       const data = await res.json();
       setHistory(data);
     } catch (err) {
@@ -35,7 +35,7 @@ function Dashboard({ username, onLogout }) {
     formData.append("category", category);
 
     try {
-      const res = await fetch("http://127.0.0.1:8000/upload/", {
+      const res = await fetch("https://court-in-action.onrender.com/upload/", {
         method: "POST",
         body: formData
       });
@@ -268,7 +268,7 @@ function Dashboard({ username, onLogout }) {
                     className="download-btn"
                     onClick={() =>
                       window.open(
-                        `http://127.0.0.1:8000/download/${item.report_file}`
+                        `https://court-in-action.onrender.com/download/${item.report_file}`
                       )
                     }
                   >
