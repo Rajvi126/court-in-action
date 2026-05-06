@@ -9,7 +9,7 @@ function Dashboard({ username, onLogout }) {
 
   useEffect(() => {
     fetchHistory();
-  }, []);
+  }, [username]);
 
   const fetchHistory = async () => {
     try {
